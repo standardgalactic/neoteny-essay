@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: neoteny.aux
+The style file: apalike.bst
+Database file #1: neoteny_refs.bib
+You've used 24 entries,
+            1935 wiz_defined-function locations,
+            619 strings with 6878 characters,
+and the built_in function-call counts, 8273 in all, are:
+= -- 820
+> -- 234
+< -- 22
++ -- 93
+- -- 71
+* -- 640
+:= -- 1463
+add.period$ -- 73
+call.type$ -- 24
+change.case$ -- 144
+chr.to.int$ -- 24
+cite$ -- 24
+duplicate$ -- 341
+empty$ -- 642
+format.name$ -- 102
+if$ -- 1613
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 32
+newline$ -- 123
+num.names$ -- 74
+pop$ -- 125
+preamble$ -- 1
+purify$ -- 153
+quote$ -- 0
+skip$ -- 258
+stack$ -- 0
+substring$ -- 631
+swap$ -- 28
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 126
+warning$ -- 0
+while$ -- 76
+width$ -- 0
+write$ -- 314

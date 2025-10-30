@@ -1,32 +1,50 @@
-# Neoteny Essay — LaTeX → PDF on GitHub Pages
+# The Ecology of Neoteny
 
-This repository compiles LaTeX sources in `/src` with **LuaLaTeX + BibTeX**, then publishes the resulting PDFs and an auto-generated `index.html` to **GitHub Pages**.
+**Institutions, Entropy, and the Steady-State Civilization**  
+*Flyxion – October 2025*
 
-Site URL (after first successful deploy):  
-`https://standardgalactic.github.io/neoteny-essay/`
-
----
-
-## How it works
-
-- A GitHub Actions workflow installs TeX Live and runs `latexmk -lualatex -bibtex` for each `*.tex` in `/src`.
-- Compiled PDFs are placed in `/build`.
-- `scripts/generate_index.py` scans `/build` and creates `/build/index.html` with links to all PDFs.
-- The `/build` directory is deployed to GitHub Pages.
+[Download Pdf](https://standardgalactic.github.io/neoteny-essay/The%20Ecology%20of%20Neoteny.pdf)
 
 ---
 
-## Local build
+## Abstract
 
-```bash
-sudo apt-get install texlive-full latexmk python3
-latexmk -lualatex -bibtex -interaction=nonstopmode -output-directory=build src/neoteny_extended.tex
-python3 scripts/generate_index.py build
-# Open build/index.html
-```
+This essay argues that civilisation’s creative longevity depends on the **managed preservation of neotenous cognition**—curiosity, play, and exploration—within protective institutional niches. Drawing on Alison Gopnik’s tripartite model of human intelligences (*Exploit, Explore, Empower*), it extends these ideas into an **entropic framework**, treating curiosity as a thermodynamic variable that must be subsidised and regulated.
+
+The result is a vision of the **steady-state civilisation**—a society that sustains perpetual exploration through **equilibrium**, not expansion. Empirical evidence from cognitive economics, cooperative game theory, and aging research is incorporated to show that social systems can maintain innovation and well-being **without continuous material growth**.
 
 ---
 
-## Add more papers
+## Key Concepts
 
-Drop additional `.tex` and `.bib` files into `/src`. As long as each `.tex` references its `.bib` via `\bibliography{...}`, the workflow will produce a matching `.pdf` and list it on the index.
+| Concept | Description |
+|--------|-------------|
+| **Neoteny** | Retention of juvenile cognitive traits (curiosity, play) into adulthood |
+| **Cognitive Sanctuaries** | Institutions (universities, labs) that subsidise exploration |
+| **Entropy Converters** | Systems that absorb local disorder to preserve global order (Georgescu-Roegen) |
+| **Steady-State Equilibrium** | $$\frac{dS_{\text{usable}}}{dt} = 0$$ — usable entropy conserved |
+| **Thermodynamic Ethics** | Morality as entropy management: curiosity balanced by care |
+
+---
+
+## Core Proposals
+
+1. **Universal Basic Income as Entropy Buffer**  
+   $$ \mathrm{UBI} + \mathrm{Incentives}_{\mathrm{compression}} = \mathrm{Sustainable\ curiosity} $$
+
+2. **Geozotic Lottery**  
+   Diffuse innovation rewards via spatial decay:  
+   $$ R(x) = R_0 e^{-\lambda d(x,x_0)} $$
+
+3. **Entropy Efficiency Index**  
+   $$ \eta_S = \frac{\Delta I}{\Delta E} $$
+---
+
+## Structure
+
+- **Part I**: Neoteny and Institutional Scaffolding  
+- **Part II**: Entropic Ethics of Curiosity  
+- **Part III**: Collective Autocatalysis & Cooperative Minima  
+- **Part IV**: Aging as Simulated Annealing  
+- **Part V**: The Steady-State Civilization  
+- **Appendix**: Modeling Entropic Subsidies (agent-based simulation ready)
