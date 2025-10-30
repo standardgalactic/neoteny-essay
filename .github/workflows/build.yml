@@ -1,0 +1,49 @@
+name: Build and Deploy PDFs
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live and Python
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-full latexmk python3
+
+      - name: Compile all .tex files
+        run: |
+          mkdir -p build
+          for f in src/*.tex; do
+            echo "Compiling $f"
+            base=$(basename "$f" .tex)
+            latexmk -lualatex -bibtex -interaction=nonstopmode -output-directory=build "src/$base.tex"
+          done
+
+      - name: Generate PDF index page
+        run: python3 scripts/generate_index.py build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
