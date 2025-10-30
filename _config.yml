@@ -1,0 +1,6 @@
+title: "LaTeX PDF Index"
+theme: jekyll-theme-minimal
+exclude:
+  - ".github"
+  - "scripts"
+  - "src"
